@@ -5,23 +5,22 @@ export function HeroSection() {
   return (
     <section className="hero" id="home">
       <div className="hero-copy">
-        <p className="eyebrow">A RACCOON. A CITY. A VERY BAD TRADE.</p>
+        <p className="eyebrow">JIMOTHY THE REKT RACCOON · $REKCOON · ON ETHEREUM</p>
         <h1>
-          WE’RE
+          BORN JIMOTHY.
           <br />
-          <em>REKT.</em>
+          <em>REKT BY CHOICE.</em>
         </h1>
         <p className="hero-description">
-          Bad trades. Empty wallet. Existential dread.
-          <br />
-          Same hat. Same answer.
+          Jimothy was just an ordinary raccoon with extraordinary confidence and absolutely no understanding of risk management.
         </p>
+        <p className="hero-secondary">He lost his portfolio. Not his personality.</p>
         <div className="hero-actions">
-          <a className="button orange" href="#memes">
-            FIND YOUR COPING MECHANISM
+          <a className="button orange" href="#lore">
+            MEET JIMOTHY
           </a>
-          <a className="text-link" href="#lore">
-            Meet Rekcoon
+          <a className="text-link" href="#chart">
+            VIEW CHART
           </a>
         </div>
         <ContractPanel />
@@ -29,7 +28,7 @@ export function HeroSection() {
       <div className="hero-photo">
         <img
           src={asset("texcat.jpg")}
-          alt="Rekt Raccoon in a cowboy hat, smoking on a balcony above the city at night"
+          alt="Jimothy in a cowboy hat, smoking on a balcony above the city at night"
           width={1000}
           height={1000}
           fetchPriority="high"
@@ -41,7 +40,7 @@ export function HeroSection() {
         </div>
         <span className="photo-label">03:00 AM / SOMEWHERE ABOVE THE CITY</span>
       </div>
-      <a href="#lore" className="scroll-note">
+      <a href="#chart" className="scroll-note">
         SCROLL. HE’S NOT GOING ANYWHERE.
       </a>
     </section>

@@ -15,42 +15,42 @@ export type Meme = {
 export const lore: LoreChapter[] = [
   {
     index: "01",
-    title: "I'm fine.",
+    title: "A Raccoon With a Dream",
     paragraphs: [
-      "He bought the top.\nThen he bought the dip.\nThen the dip found another dip.",
-      "He looked at his empty wallet, adjusted his cowboy hat, and whispered:\n\"I'm fine.\"",
+      "Jimothy was an ordinary raccoon.\nHe had a trash can, a cowboy hat, and a perfectly acceptable life.\nThen he discovered cryptocurrency.",
+      "One stranger on the internet promised him generational wealth.\nJimothy believed every word.\n\nHe bought the top.\nThen he bought the dip.\nThen he discovered the dip had another dip.\n\nAnd so began his financial education.",
     ],
   },
   {
     index: "02",
-    title: "One more candle.",
+    title: "One More Candle",
     paragraphs: [
-      "Rekt Raccoon promised himself he would go to bed after one more candle. That was eleven candles ago.",
-      "The coffee is cold.\nThe market is red.\nTomorrow, he'll finally become a responsible adult.\nProbably.",
+      "Jimothy promised himself he'd go to bed after one more candle.\nThat was eleven candles ago.",
+      "The coffee went cold.\nHis wallet went colder.\nThe chart was red.\nHis eyes were red.\n\nBut Jimothy remained absolutely certain that the next candle would change everything.",
     ],
   },
   {
     index: "03",
-    title: "Nobody needs to know.",
+    title: "The Professional Bagholder",
     paragraphs: [
-      "His friends think he is making money. His family thinks he works in technology. His bank thinks something is terribly wrong.",
-      "He watches the rain, checks the chart, and tells absolutely nobody.",
+      "His friends thought he was making money.\nHis family thought he worked in technology.\nHis bank thought something was terribly wrong.",
+      "Jimothy had an explanation for everything.\n\n\"It's a long-term investment.\"\n\"This is healthy consolidation.\"\n\"The whales are accumulating.\"\n\nNobody asked for these explanations.\nHe gave them anyway.",
     ],
   },
   {
     index: "04",
-    title: "Still standing.",
+    title: "The Market Called Him REKT",
     paragraphs: [
-      "The stop-loss never triggered.\nThe liquidation definitely did.",
-      "His account balance disappeared faster than his last relationship.\n\nBut somehow, Rekt Raccoon is still here.\nStill checking. Still coping.\nStill wearing that hat.",
+      "His portfolio fell.\nHis confidence followed.\n\nThe stop-loss never triggered.\nThe liquidation definitely did.",
+      "The market gave him a new name:\nREKT.\n\nJimothy adjusted his cowboy hat.\nLit another cigarette.\nAnd checked the chart again.",
     ],
   },
   {
     index: "05",
-    title: "We are all Rekt Raccoon.",
+    title: "Still Jimothy",
     paragraphs: [
-      "Everyone has that trade. The one they never mention. The one that seemed like guaranteed generational wealth at 2:47 AM.",
-      "Somewhere out there, another trader is staring at a red chart and saying:\n\"I'm fine.\"\n\nThat's how you know you've met another raccoon.",
+      "The market took his portfolio.\nIt took his sleep.\nIt took the last remaining balance in his exchange account.\n\nBut it couldn't take his personality.",
+      "Every night, somewhere in the city, another trader stares at a red candle.\nAnd whispers the same words:\n\n\"I'm fine.\"\n\nThat's how Jimothy knows he's not alone.",
     ],
   },
 ];
@@ -74,12 +74,13 @@ export const memes: Meme[] = [
 ];
 
 export const checkInReplies = [
-  "YOU SAID THAT YESTERDAY.",
+  "JIMOTHY SAID THAT YESTERDAY.",
   "THE WALLET DISAGREES.",
-  "DENIAL LEVEL: PROFESSIONAL.",
-  "ANOTHER DAY. ANOTHER COPING SESSION.",
   "THE HAT IS STILL BULLISH.",
+  "ANOTHER DAY. ANOTHER COPING SESSION.",
+  "FINANCIALLY REKT. EMOTIONALLY JIMOTHY.",
+  "HE HAS SEEN WORSE. PROBABLY.",
 ] as const;
 
 export const tickerLine =
-  "REKCOON IS FINE. ✳ THE CHART IS NOT. ✳ REKCOON IS FINE. ✳ TOMORROW WILL FIX IT. ✳ ";
+  "BORN JIMOTHY. ✳ REKT BY CHOICE. ✳ JIMOTHY IS FINE. ✳ THE CHART IS NOT. ✳ ";

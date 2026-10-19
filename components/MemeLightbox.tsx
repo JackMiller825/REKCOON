@@ -77,7 +77,7 @@ export function MemeLightbox({ memes, index, onDismiss, onIndex }: Props) {
         <>
           <img id="dialog-image" src={asset(meme.file)} alt={meme.caption} width={meme.width} height={meme.height} />
           <h3 id="dialog-caption">{meme.caption}</h3>
-          <p>Rekcoon is fine.</p>
+          <p>Jimothy is fine.</p>
           <p className="dialog-count">
             {String(index + 1).padStart(2, "0")} / {String(memes.length).padStart(2, "0")}
             <span className="sr-only"> Left and right arrow keys change the image. Escape closes this dialog.</span>

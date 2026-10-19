@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { asset, isHttpUrl, site } from "@/lib/site";
 
 const links = [
+  { href: "#chart", label: "CHART" },
   { href: "#lore", label: "THE LORE" },
   { href: "#memes", label: "COPING MATERIAL" },
 ];
@@ -27,7 +28,10 @@ export function SiteHeader() {
     <header>
       <a className="brand" href="#home" onClick={close}>
         <img src={asset("REKCOON-logo-transparent.png")} alt="" width={43} height={43} />
-        REKCOON
+        <span className="brand-name">
+          JIMOTHY
+          <small>{site.symbol}</small>
+        </span>
       </a>
       <nav id="site-nav" className={open ? "open" : undefined} aria-label="Main navigation">
         {links.map((link) => (

@@ -1,4 +1,4 @@
-# REKCOON Help
+# Jimothy the Rekt Raccoon — Help
 
 ## Local setup
 
@@ -37,17 +37,18 @@ Do not invent a production domain in metadata. `metadataBase` uses `NEXT_PUBLIC_
 
 All public token fields are in `lib/site.ts`.
 
-- Name: Rekt Raccoon
-- Ticker: REKCOON
+- Name: Jimothy the Rekt Raccoon
+- Short name on the header: Jimothy
+- Ticker: $REKCOON
 - Chain: Ethereum
 - Supply and tax are stored and intentionally not printed on the page
-- Liquidity and ownership stay worded as intentions. Do not rewrite them as completed until verified, and do not add a widget that claims they are completed
+- `liquidityStatus` and `ownershipStatus` stay `pending` until verified. Do not rewrite them as completed, and do not add a widget that claims they are completed
 
 `lib/content.ts` holds lore, marquee text, gallery entries, and check-in replies.
 
 ## Token updates
 
-Set `contractAddress` to the verified `0x` address (40 hex characters). COPY CA is always shown, in the same outlined orange treatment as the reference. It copies the text currently on screen: the real address when one is set, or `Coming Soon..` until then. The status line says “Contract copied.” for a real address and “Copied.” for the placeholder. If the clipboard is blocked, the text is selected so it can be copied manually.
+Set `token.contractAddress` to the verified `0x` address (40 hex characters). `site.contractAddress` reads that same value. COPY CA is always shown. It copies the text currently on screen: the real address when one is set, or `Coming Soon..` until then. The status line says “Contract copied.” for a real address and “Copied.” for the placeholder. If the clipboard is blocked, the text is selected so it can be copied manually.
 
 The site will not substitute another token’s address.
 
@@ -55,29 +56,33 @@ The site will not substitute another token’s address.
 
 Set `xUrl` and `telegramUrl` to full `http` or `https` URLs.
 
-- Header X link appears only for `xUrl`
-- Footer shows X and Telegram only when each URL is valid
-- The closing button opens X when set, otherwise Telegram
-- With neither URL, the closing button stays disabled. It does not add a coming-soon caption.
+- Header X link appears only for `xUrl`. Otherwise the header shows `X SOON`, which is not a link.
+- Footer shows X and Telegram only when each URL is valid.
+- **Join the Trash Club** opens `telegramUrl` only.
+- With no Telegram URL, that button stays disabled and the line “Telegram link not published yet.” is shown.
 
 ## Chart configuration
 
-`dexscreenerUrl` remains in `lib/site.ts` for a future chart. The live-chart section is not rendered.
+Set `dexscreenerUrl` to a `https://dexscreener.com/...` pair URL. The chart section then embeds that pair and **Open on Dexscreener** becomes a real link.
+
+Until then the section shows Jimothy’s chart still, a “No live pair” label, and a disabled **Open on Dexscreener** control. No price is invented. Do not paste another project’s contract or pair.
 
 ## Branding asset replacement
 
-Keep these filenames in `public/assets/`:
+Keep these filenames in `public/assets/`. Production sizes:
 
-- `REKCOON-logo-transparent.png` — header mark. Regenerate `app/icon.png` (192) and `app/apple-icon.png` (180) after replacing it
-- `REKCOON-banner-1500x500.png` — Open Graph and Twitter image
-- `REKCOON-brand-poster-square.png` — faint wash behind the closing statement
-- `REKCOON-telegram-banner-1100x520.png` — not placed on the page. Use it for Telegram, not as another homepage banner
+- `REKCOON-logo-transparent.png` — 1024 × 1024, transparent outside the circle. Header mark. Regenerate `app/icon.png` (192) and `app/apple-icon.png` (180) after replacing it.
+- `REKCOON-brand-poster-square.png` — 1024 × 1024, opaque. Faint wash behind the closing statement. Token text is `$REKCOON` only.
+- `REKCOON-banner-1500x500.png` — 1500 × 500, opaque. Open Graph and Twitter image. Name plus ticker.
+- `REKCOON-telegram-banner-1100x520.png` — 1100 × 520, opaque. Not placed on the page. Use it for Telegram.
 
-Interface type is Barlow Condensed and DM Sans. It is meant to sit beside the gold outlaw lettering in the artwork, not to redraw that lettering.
+See `BRAND-GUIDE.md` for what text belongs on each file.
+
+Interface type is Barlow Condensed and DM Sans. It sits beside the gold outlaw lettering in the artwork and does not redraw that lettering.
 
 ## Video files
 
-`one-more-night.mp4` and `still-fine.mp4` stay in `public/assets/`. The “One more night” section is not on the page, so those files are not played.
+`one-more-night.mp4` and `still-fine.mp4` play in the “One more night” section. They are muted, looping, and start when most of the player is on screen. `preload="none"` keeps them from downloading until needed. Reduced motion leaves them paused on the poster frame, with controls still available. The note under the players says they are silent. Do not describe them as having audio.
 
 ## Sound system
 
@@ -96,27 +101,36 @@ Click a card to open the dialog.
 - Focus returns to the card that opened the dialog
 - The dialog traps focus while open and the page behind it does not scroll
 
-Captions and filenames are the `memes` array in `lib/content.ts`. Thumbnails keep each file’s real aspect ratio.
+Captions and filenames are the `memes` array in `lib/content.ts`. Thumbnails keep each file’s real aspect ratio. The refrain on every card is “Jimothy is fine.”
+
+The gallery keeps the reference’s fourteen cards, including the four scene stills that sit after the ten meme files.
 
 ## Daily check-in behavior
 
-The button label stays `I’M FINE.` The portfolio line stays `Your portfolio is down 80%.`
+The heading is `JIMOTHY, YOU GOOD?` The button label stays `I’M FINE.` The portfolio line stays `Your portfolio is down 80%.`
 
 Each click replaces “Go on. Say it again.” with the next line:
 
-1. YOU SAID THAT YESTERDAY.
+1. JIMOTHY SAID THAT YESTERDAY.
 2. THE WALLET DISAGREES.
-3. DENIAL LEVEL: PROFESSIONAL.
+3. THE HAT IS STILL BULLISH.
 4. ANOTHER DAY. ANOTHER COPING SESSION.
-5. THE HAT IS STILL BULLISH.
+5. FINANCIALLY REKT. EMOTIONALLY JIMOTHY.
+6. HE HAS SEEN WORSE. PROBABLY.
 
 Then it repeats. The new line is an `aria-live` message and fades in unless reduced motion is on. Nothing counts users or invents market activity.
+
+## Animation
+
+Sections with `.reveal` fade up once they enter the viewport. The marquee loops. On viewports wider than 900px the hero photograph shifts slightly with scroll. `prefers-reduced-motion: reduce` stops the marquee, the reveal, the hero shift, and smooth scrolling. Videos stay paused in that mode.
 
 ## Troubleshooting
 
 - **Images 404 on GitHub Pages:** the base path was not applied. Rebuild with `NEXT_PUBLIC_BASE_PATH=/REKCOON`.
 - **Images 404 locally:** do not set that variable for `npm run dev`.
 - **COPY CA copies “Coming Soon..”:** that is expected until `contractAddress` is a verified `0x` address.
+- **Open on Dexscreener does nothing:** the control is disabled until `dexscreenerUrl` is a real Dexscreener pair.
+- **Join the Trash Club does nothing:** Telegram is not set. The status line under the button says so.
 - **Horizontal scroll:** check a new wide asset. Hero and ticker are clipped by their own containers.
 - **Build font warning:** Barlow Condensed and DM Sans load from Google Fonts in the browser. The build does not download them.
 
@@ -124,19 +138,17 @@ Then it repeats. The new line is an `aria-live` message and fades in unless redu
 
 - One `h1`. Section titles are `h2`. Lore cards and the dialog use `h3`.
 - Skip link, visible focus rings, 44px targets on menu, copy, dialog, and mobile text links.
-- Decorative logo is empty alt because the word REKCOON is in the same link. Scene images have descriptions.
+- Decorative logo is empty alt because the word JIMOTHY is in the same link. Scene images have descriptions.
 - Dialog is a native `dialog` with `showModal` (focus trap, Escape, background scroll lock).
 - Copy and check-in status use `role="status"` or `aria-live="polite"`.
-- `prefers-reduced-motion` stops the marquee, scroll smoothing, reveals, and the check-in fade.
+- `prefers-reduced-motion` stops the marquee, scroll smoothing, reveals, the hero shift, and video autoplay.
 
 ## Known limitations
 
-- Lore on the reference is five columns of type with no pictures. This site matches that. Chapter artworks are used in the gallery and the check-in, not as a second image stack inside the lore.
-- The live chart and “One more night” video section are omitted.
+- Lore on the reference is five columns of type with no pictures. This site matches that.
 - The reference soundtrack and its player are absent on purpose.
-- X, Telegram, contract, and Dexscreener stay in a coming-soon state until `lib/site.ts` is filled in.
+- X, Telegram, contract, and Dexscreener stay unpublished until `lib/site.ts` is filled in.
 - Liquidity burn and ownership renounce are not shown as done.
-- The shipped MP4s are still-image loops and are not shown on the page.
+- The shipped MP4s are still-image loops. The page says they are silent.
+- The square poster is a closing wash, not the hero background, because its sign lettering would sit on top of the headline.
 - Fidelity was checked against the live reference CSS and browser screenshots. It is not a claim that every pixel matches at every width.
-- The closing section carries a faint brand-poster wash. The reference ending is flat color only.
-- Mobile navigation is an explicit menu. The reference instead hides some links as the window narrows.

@@ -12,7 +12,11 @@ export function DailyCheckin() {
     <section className="fine-machine section reveal" aria-labelledby="checkin-label">
       <div>
         <p className="eyebrow">THE DAILY CHECK-IN</p>
-        <h2 id="checkin-label">YOU GOOD?</h2>
+        <h2 id="checkin-label">
+          JIMOTHY,
+          <br />
+          YOU GOOD?
+        </h2>
         <p id="situation">Your portfolio is down 80%.</p>
         <button
           className="button orange"
@@ -32,7 +36,7 @@ export function DailyCheckin() {
         height={1000}
         loading="lazy"
         decoding="async"
-        alt="Rekt Raccoon holding coffee, looking calm while the office behind him burns"
+        alt="Jimothy holding coffee, looking calm while the office behind him burns"
       />
     </section>
   );

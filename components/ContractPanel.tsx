@@ -3,12 +3,10 @@
 import { useState } from "react";
 import { isAddress, site } from "@/lib/site";
 
-const placeholder = "Coming Soon..";
-
 export function ContractPanel() {
   const address = site.contractAddress.trim();
   const ready = isAddress(address);
-  const shown = ready ? address : placeholder;
+  const shown = ready ? address : site.contractDisplay;
   const [copied, setCopied] = useState(false);
   const [status, setStatus] = useState("");
 

@@ -1,32 +1,34 @@
 # Asset map
 
-Scene filenames match the reference pack so a file can be replaced without renaming. Branding files keep the `REKCOON-*` names.
+Scene filenames match the reference pack so a file can be replaced without renaming. Branding files keep the `REKCOON-*` names. Only the four branding files were replaced for the Jimothy identity. Scene stills and videos were not regenerated.
 
-| File | Where it is used |
-|---|---|
-| `texcat.jpg` | Hero photograph |
-| `closeup.jpg` | In the asset pack. Not placed on the page. |
-| `office-fine.jpg` | Daily check-in and gallery card 12 |
-| `portfolio-v2.jpg` | Gallery card 11 |
-| `bus-stop.jpg` | Gallery card 13. Narrative still for lore chapter 03 |
-| `diner.jpg` | Gallery card 14. Narrative still for lore chapter 02 |
-| `meme-crying.jpg` | Gallery card 03. Narrative still for lore chapter 05 |
-| `meme-party.jpg` | Gallery card 01 |
-| `meme-roses.jpg` | Gallery card 02 |
-| `meme-doorway.jpg` | Gallery card 04 |
-| `meme-beach.jpg` | Gallery card 05 |
-| `meme-bar.jpg` | Gallery card 06 |
-| `meme-driver.jpg` | Gallery card 07 |
-| `meme-waiting.jpg` | Gallery card 08 |
-| `meme-photo.jpg` | Gallery card 09 |
-| `meme-sky.jpg` | Gallery card 10 |
-| `one-more-night.mp4` | Silent loop kept in the pack. Not played on the page. |
-| `still-fine.mp4` | Silent loop kept in the pack. Not played on the page. |
-| `REKCOON-logo-transparent.png` | Header mark. Source for `app/icon.png` and `app/apple-icon.png` |
-| `REKCOON-banner-1500x500.png` | Open Graph and Twitter image |
-| `REKCOON-brand-poster-square.png` | Low-opacity wash on the closing section |
-| `REKCOON-telegram-banner-1100x520.png` | Not used on the page. Reserved for Telegram |
+| File | Size | Where it is used |
+|---|---|---|
+| `texcat.jpg` | Scene still | Hero photograph |
+| `closeup.jpg` | Scene still | In the asset pack. Not placed on the page. |
+| `office-fine.jpg` | Scene still | Daily check-in, gallery card 12, poster for `still-fine.mp4` |
+| `portfolio-v2.jpg` | Scene still | Chart placeholder and gallery card 11 |
+| `bus-stop.jpg` | Scene still | Gallery card 13 |
+| `diner.jpg` | Scene still | Gallery card 14 and poster for `one-more-night.mp4` |
+| `meme-crying.jpg` | Scene still | Gallery card 03 |
+| `meme-party.jpg` | Scene still | Gallery card 01 |
+| `meme-roses.jpg` | Scene still | Gallery card 02 |
+| `meme-doorway.jpg` | Scene still | Gallery card 04 |
+| `meme-beach.jpg` | Scene still | Gallery card 05 |
+| `meme-bar.jpg` | Scene still | Gallery card 06 |
+| `meme-driver.jpg` | Scene still | Gallery card 07 |
+| `meme-waiting.jpg` | Scene still | Gallery card 08 |
+| `meme-photo.jpg` | Scene still | Gallery card 09 |
+| `meme-sky.jpg` | Scene still | Gallery card 10 |
+| `one-more-night.mp4` | Silent loop | Night section, left player |
+| `still-fine.mp4` | Silent loop | Night section, right player |
+| `REKCOON-logo-transparent.png` | 1024 × 1024 PNG, transparent outside the circle | Header mark. Source for `app/icon.png` (192) and `app/apple-icon.png` (180) |
+| `REKCOON-brand-poster-square.png` | 1024 × 1024 PNG, opaque | Low-opacity wash on the closing section. Ticker lettering only: `$REKCOON` |
+| `REKCOON-banner-1500x500.png` | 1500 × 500 PNG, opaque | Open Graph and X share image. Lettering: `JIMOTHY THE REKT RACCOON` and `$REKCOON` |
+| `REKCOON-telegram-banner-1100x520.png` | 1100 × 520 PNG, opaque | Not placed on the page. Telegram and promo artwork. Same name and ticker lettering as the X banner |
 
-The reference lore does not print these stills inside the five chapters. They stay in the gallery and the sections above so the column layout can match texcat.fun. Lore chapter 01 corresponds to `office-fine.jpg`, which is also the check-in image.
+The square poster and the circular logo do not use “Jimothy” or “Rekt Raccoon” as token names. Background phrases that are part of the artwork, such as signs in the scene, stay in the file. The wide banners use the full name plus `$REKCOON`. Interface type does not redraw that gold lettering.
 
-No audio file is shipped. Do not drop in the reference site's music.
+The reference lore does not print stills inside the five chapters. Those pictures stay in the gallery, the chart placeholder, and the check-in.
+
+No audio file is shipped. Do not drop in the reference site’s music.

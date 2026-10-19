@@ -15,21 +15,17 @@ export function MemeGallery() {
       <section className="memes section reveal" id="memes" aria-labelledby="memes-label">
       <div className="section-top">
         <p className="eyebrow" id="memes-label">
-          02 / COPING MATERIAL
+          03 / COPING MATERIAL
         </p>
         <span>EMOTIONAL DAMAGE. EXCELLENT HAT.</span>
       </div>
       <div className="intro-heading">
         <h2>
-          DIFFERENT DAY.
+          JIMOTHY&apos;S
           <br />
-          <em>SAME BAD TRADE.</em>
+          <em>COPING MATERIAL</em>
         </h2>
-        <p>
-          A little too relatable?
-          <br />
-          Welcome to the trash club.
-        </p>
+        <p>Different day. Same bad trade.</p>
       </div>
       <div className="meme-grid">
         {memes.map((meme, memeIndex) => (
@@ -43,7 +39,7 @@ export function MemeGallery() {
             <div className="meme-image">
               <img
                 src={asset(meme.file)}
-                alt={`${meme.caption} Rekt Raccoon.`}
+                alt={`${meme.caption} Jimothy is fine.`}
                 width={meme.width}
                 height={meme.height}
                 loading="lazy"
@@ -52,7 +48,7 @@ export function MemeGallery() {
             </div>
             <div className="meme-overlay">
               {meme.caption}
-              <strong>Rekcoon is fine.</strong>
+              <strong>Jimothy is fine.</strong>
             </div>
             <div className="meme-meta">
               <span>{meme.label}</span>

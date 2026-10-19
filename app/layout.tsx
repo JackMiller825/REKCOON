@@ -7,30 +7,30 @@ const ogImage = new URL(`${basePath}/assets/REKCOON-banner-1500x500.png`, siteUr
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
-  title: "Rekt Raccoon ($REKCOON) | Still Here. Still Rekt.",
+  title: "Jimothy the Rekt Raccoon ($REKCOON) | Born Jimothy. Rekt by Choice.",
   description:
-    "Meet Rekt Raccoon. Bad trades, empty wallet, existential dread, and one very good cowboy hat. A cinematic Ethereum meme token.",
-  applicationName: "Rekt Raccoon",
+    "Meet Jimothy the Rekt Raccoon. A cowboy hat, terrible trades, and an impressive ability to pretend everything is fine. $REKCOON on Ethereum.",
+  applicationName: "Jimothy the Rekt Raccoon",
   openGraph: {
     type: "website",
-    siteName: "Rekt Raccoon",
-    title: "Rekt Raccoon ($REKCOON) | Still Here. Still Rekt.",
+    siteName: "Jimothy the Rekt Raccoon",
+    title: "Jimothy the Rekt Raccoon ($REKCOON) | Born Jimothy. Rekt by Choice.",
     description:
-      "Meet Rekt Raccoon. Bad trades, empty wallet, existential dread, and one very good cowboy hat. A cinematic Ethereum meme token.",
+      "Meet Jimothy the Rekt Raccoon. A cowboy hat, terrible trades, and an impressive ability to pretend everything is fine. $REKCOON on Ethereum.",
     images: [
       {
         url: ogImage,
         width: 1500,
         height: 500,
-        alt: "Rekt Raccoon banner. Still here. Still rekt.",
+        alt: "Jimothy the Rekt Raccoon. $REKCOON on Ethereum.",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Rekt Raccoon ($REKCOON) | Still Here. Still Rekt.",
+    title: "Jimothy the Rekt Raccoon ($REKCOON) | Born Jimothy. Rekt by Choice.",
     description:
-      "Meet Rekt Raccoon. Bad trades, empty wallet, existential dread, and one very good cowboy hat. A cinematic Ethereum meme token.",
+      "Meet Jimothy the Rekt Raccoon. A cowboy hat, terrible trades, and an impressive ability to pretend everything is fine. $REKCOON on Ethereum.",
     images: [ogImage],
   },
 };

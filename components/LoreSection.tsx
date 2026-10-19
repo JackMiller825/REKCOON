@@ -8,18 +8,18 @@ export function LoreSection() {
         <p className="eyebrow" id="lore-label">
           01 / THE LORE
         </p>
-        <span>NO EPIC QUEST. JUST BAD ENTRIES.</span>
+        <span>FIVE CHAPTERS. ZERO RISK MANAGEMENT.</span>
       </div>
       <div className="intro-heading">
         <h2>
           YOU KNOW
           <br />
-          <em>THIS RACCOON.</em>
+          <em>JIMOTHY.</em>
         </h2>
         <p>
-          He always says everything is fine.
+          He lost his portfolio.
           <br />
-          Even when his wallet strongly disagrees.
+          Not his personality.
         </p>
       </div>
       <div className="lore-grid">

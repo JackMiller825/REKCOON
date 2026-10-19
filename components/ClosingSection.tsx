@@ -1,8 +1,7 @@
-import { asset, communityUrl, isHttpUrl, site } from "@/lib/site";
+import { asset, isHttpUrl, site } from "@/lib/site";
 
 export function ClosingSection() {
-  const href = communityUrl();
-  const label = isHttpUrl(site.xUrl) ? "Opens the official X profile" : "Opens the official Telegram";
+  const href = isHttpUrl(site.telegramUrl) ? site.telegramUrl.trim() : "";
 
   return (
     <section className="ending section reveal" aria-labelledby="ending-label">
@@ -10,26 +9,29 @@ export function ClosingSection() {
         className="ending-wash"
         src={asset("REKCOON-brand-poster-square.png")}
         alt=""
-        width={1254}
-        height={1254}
+        width={1024}
+        height={1024}
         loading="lazy"
         decoding="async"
       />
-      <p className="eyebrow">NOBODY ASKED IF REKCOON WAS FINE.</p>
+      <p className="eyebrow">STILL HERE. STILL JIMOTHY.</p>
       <h2 id="ending-label">
-        HE JUST SAID IT
+        THE MARKET CALLED HIM <em>REKT.</em>
         <br />
-        <em>ANYWAY.</em>
+        HIS FRIENDS STILL CALL HIM <em>JIMOTHY.</em>
       </h2>
-      <p>Somewhere in the city, another trader is saying it too.</p>
+      <p>Still here. Still Jimothy. Still REKCOON.</p>
       {href ? (
-        <a className="button orange" href={href} target="_blank" rel="noopener noreferrer" aria-label={label}>
-          X · WE’RE REKT TOGETHER
+        <a className="button orange" href={href} target="_blank" rel="noopener noreferrer" aria-label="Opens the official Telegram">
+          JOIN THE TRASH CLUB
         </a>
       ) : (
-        <button className="button orange" type="button" disabled>
-          WE’RE REKT TOGETHER
-        </button>
+        <>
+          <button className="button orange" type="button" disabled>
+            JOIN THE TRASH CLUB
+          </button>
+          <span className="ending-status">Telegram link not published yet.</span>
+        </>
       )}
     </section>
   );

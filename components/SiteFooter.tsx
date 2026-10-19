@@ -5,9 +5,9 @@ export function SiteFooter() {
   return (
     <footer>
       <a className="brand" href="#home">
-        REKCOON
+        JIMOTHY
       </a>
-      <p>A MEME. A MOOD. A VERY BAD TRADE.</p>
+      <p>BORN JIMOTHY. REKT BY CHOICE.</p>
       {(isHttpUrl(site.xUrl) || isHttpUrl(site.telegramUrl)) && (
         <div className="footer-links">
           {isHttpUrl(site.xUrl) && (
@@ -23,7 +23,7 @@ export function SiteFooter() {
         </div>
       )}
       <small>
-        © {year} REKT RACCOON. STILL HERE.
+        © {year} JIMOTHY THE REKT RACCOON. STILL HERE.
       </small>
     </footer>
   );
