@@ -5,9 +5,9 @@ Scene filenames match the reference pack so a file can be replaced without renam
 | File | Where it is used |
 |---|---|
 | `texcat.jpg` | Hero photograph |
-| `closeup.jpg` | Poster for `one-more-night.mp4` |
-| `office-fine.jpg` | Daily check-in, poster for `still-fine.mp4`, gallery card 12 |
-| `portfolio-v2.jpg` | Chart placeholder, gallery card 11 |
+| `closeup.jpg` | In the asset pack. Not placed on the page. |
+| `office-fine.jpg` | Daily check-in and gallery card 12 |
+| `portfolio-v2.jpg` | Gallery card 11 |
 | `bus-stop.jpg` | Gallery card 13. Narrative still for lore chapter 03 |
 | `diner.jpg` | Gallery card 14. Narrative still for lore chapter 02 |
 | `meme-crying.jpg` | Gallery card 03. Narrative still for lore chapter 05 |
@@ -20,8 +20,8 @@ Scene filenames match the reference pack so a file can be replaced without renam
 | `meme-waiting.jpg` | Gallery card 08 |
 | `meme-photo.jpg` | Gallery card 09 |
 | `meme-sky.jpg` | Gallery card 10 |
-| `one-more-night.mp4` | First silent loop. About 8 seconds, still-image motion |
-| `still-fine.mp4` | Second silent loop. About 8 seconds, still-image motion |
+| `one-more-night.mp4` | Silent loop kept in the pack. Not played on the page. |
+| `still-fine.mp4` | Silent loop kept in the pack. Not played on the page. |
 | `REKCOON-logo-transparent.png` | Header mark. Source for `app/icon.png` and `app/apple-icon.png` |
 | `REKCOON-banner-1500x500.png` | Open Graph and Twitter image |
 | `REKCOON-brand-poster-square.png` | Low-opacity wash on the closing section |

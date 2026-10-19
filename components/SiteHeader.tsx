@@ -4,7 +4,6 @@ import { useEffect, useState } from "react";
 import { asset, isHttpUrl, site } from "@/lib/site";
 
 const links = [
-  { href: "#chart", label: "CHART" },
   { href: "#lore", label: "THE LORE" },
   { href: "#memes", label: "COPING MATERIAL" },
 ];

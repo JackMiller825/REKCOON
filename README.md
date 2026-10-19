@@ -52,10 +52,10 @@ Editable token values live only in `lib/site.ts`:
 
 | Field | Empty behavior |
 |---|---|
-| `contractAddress` | Shows `Coming Soon..`. Copy control stays hidden until the value is a `0x` + 40 hex address. |
-| `xUrl` | Header shows `𝕏 SOON`. Closing button stays disabled. |
+| `contractAddress` | Shows `Coming Soon..` until the value is a `0x` + 40 hex address. COPY CA is always visible and copies the text on screen. |
+| `xUrl` | Header shows `X SOON`. Closing button stays disabled. |
 | `telegramUrl` | Used for the closing button only when X is empty and this is an `http(s)` URL. |
-| `dexscreenerUrl` | Placeholder art. An iframe is used only for a real `dexscreener.com` pair URL. |
+| `dexscreenerUrl` | Stored for later. The live-chart section is not on the page. |
 | `supply`, `tax` | Stored for reference. Not rendered, so the page never implies a live tokenomics claim. |
 | `liquidity`, `ownership` | Pending-verification notes. Not rendered as completed facts. |
 
@@ -63,12 +63,10 @@ Story copy, gallery captions, and the daily check-in lines live in `lib/content.
 
 ## What the page does
 
-- Header anchors: Chart, The Lore, Coping Material, and X when a real URL exists.
+- Header anchors: The Lore, Coping Material, and X when a real URL exists.
 - Mobile menu below 900px, including Escape to close.
-- Hero, contract row, and orange marquee.
-- Honest chart panel. No fake prices.
+- Hero, contract row with a working COPY CA button, and orange marquee.
 - Five lore chapters in the reference's editorial columns.
-- Two silent MP4 loops, muted, looping, and paused off-screen. Reduced motion skips autoplay.
 - Fourteen-image gallery. Lightbox supports previous, next, arrow keys, Escape, outside click, download of the real file, and focus return.
 - Daily check-in cycles five replies.
 - Closing community link, or a disabled coming-soon state.

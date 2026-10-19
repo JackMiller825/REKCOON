@@ -15,7 +15,7 @@ export function MemeGallery() {
       <section className="memes section reveal" id="memes" aria-labelledby="memes-label">
       <div className="section-top">
         <p className="eyebrow" id="memes-label">
-          03 / COPING MATERIAL
+          02 / COPING MATERIAL
         </p>
         <span>EMOTIONAL DAMAGE. EXCELLENT HAT.</span>
       </div>

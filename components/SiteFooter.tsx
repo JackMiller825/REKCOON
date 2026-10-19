@@ -8,7 +8,6 @@ export function SiteFooter() {
         REKCOON
       </a>
       <p>A MEME. A MOOD. A VERY BAD TRADE.</p>
-      <p>REKT RACCOON / ON ETHEREUM</p>
       {(isHttpUrl(site.xUrl) || isHttpUrl(site.telegramUrl)) && (
         <div className="footer-links">
           {isHttpUrl(site.xUrl) && (

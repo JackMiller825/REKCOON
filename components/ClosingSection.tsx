@@ -27,14 +27,10 @@ export function ClosingSection() {
           X · WE’RE REKT TOGETHER
         </a>
       ) : (
-        <>
-          <button className="button orange" type="button" disabled>
-            WE’RE REKT TOGETHER
-          </button>
-          <span className="ending-small">OFFICIAL LINK COMING SOON</span>
-        </>
+        <button className="button orange" type="button" disabled>
+          WE’RE REKT TOGETHER
+        </button>
       )}
-      <span className="ending-small">REKT RACCOON / ON ETHEREUM</span>
     </section>
   );
 }

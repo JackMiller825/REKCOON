@@ -47,9 +47,9 @@ All public token fields are in `lib/site.ts`.
 
 ## Token updates
 
-Set `contractAddress` to the verified `0x` address (40 hex characters). The copy button appears only then. It writes to the clipboard and announces “Contract copied.” If the clipboard is blocked, the address is selected so it can be copied manually.
+Set `contractAddress` to the verified `0x` address (40 hex characters). COPY CA is always shown, in the same outlined orange treatment as the reference. It copies the text currently on screen: the real address when one is set, or `Coming Soon..` until then. The status line says “Contract copied.” for a real address and “Copied.” for the placeholder. If the clipboard is blocked, the text is selected so it can be copied manually.
 
-An empty or invalid value shows `Coming Soon..` and no copy button. The site will not substitute another token’s address.
+The site will not substitute another token’s address.
 
 ## Social link configuration
 
@@ -58,16 +58,11 @@ Set `xUrl` and `telegramUrl` to full `http` or `https` URLs.
 - Header X link appears only for `xUrl`
 - Footer shows X and Telegram only when each URL is valid
 - The closing button opens X when set, otherwise Telegram
-- With neither URL, the button is disabled and the line reads `OFFICIAL LINK COMING SOON`
+- With neither URL, the closing button stays disabled. It does not add a coming-soon caption.
 
 ## Chart configuration
 
-Set `dexscreenerUrl` to the pair page, for example `https://dexscreener.com/ethereum/PAIR_ADDRESS`.
-
-- Hostname must be `dexscreener.com`
-- The page embeds `?embed=1&theme=dark` and links out with “Chart not loading? View on Dexscreener.”
-- Any other value, including a blank string, keeps the `portfolio-v2.jpg` placeholder
-- The placeholder does not draw candles, prices, or volume
+`dexscreenerUrl` remains in `lib/site.ts` for a future chart. The live-chart section is not rendered.
 
 ## Branding asset replacement
 
@@ -80,14 +75,9 @@ Keep these filenames in `public/assets/`:
 
 Interface type is Barlow Condensed and DM Sans. It is meant to sit beside the gold outlaw lettering in the artwork, not to redraw that lettering.
 
-## Video replacement
+## Video files
 
-Replace these files in place:
-
-- `public/assets/one-more-night.mp4` — poster `closeup.jpg`
-- `public/assets/still-fine.mp4` — poster `office-fine.jpg`
-
-Posters are set in `components/CinematicVideoSection.tsx`. The shipped files are about eight seconds, derived from stills, and should be treated as silent. The player is muted, loops, uses `playsInline`, and uses `preload="none"`. It attempts muted autoplay only while at least half the frame is visible, and only when the visitor has not requested reduced motion. Controls stay available.
+`one-more-night.mp4` and `still-fine.mp4` stay in `public/assets/`. The “One more night” section is not on the page, so those files are not played.
 
 ## Sound system
 
@@ -126,9 +116,7 @@ Then it repeats. The new line is an `aria-live` message and fades in unless redu
 
 - **Images 404 on GitHub Pages:** the base path was not applied. Rebuild with `NEXT_PUBLIC_BASE_PATH=/REKCOON`.
 - **Images 404 locally:** do not set that variable for `npm run dev`.
-- **Chart iframe blank:** use the Dexscreener link under the frame. Confirm the pair URL is public.
-- **Copy button missing:** the address is blank or not 42 characters of `0x` hex.
-- **Video stays on the poster:** autoplay was blocked or reduced motion is on. Press play. The files have no intentional soundtrack.
+- **COPY CA copies “Coming Soon..”:** that is expected until `contractAddress` is a verified `0x` address.
 - **Horizontal scroll:** check a new wide asset. Hero and ticker are clipped by their own containers.
 - **Build font warning:** Barlow Condensed and DM Sans load from Google Fonts in the browser. The build does not download them.
 
@@ -139,15 +127,16 @@ Then it repeats. The new line is an `aria-live` message and fades in unless redu
 - Decorative logo is empty alt because the word REKCOON is in the same link. Scene images have descriptions.
 - Dialog is a native `dialog` with `showModal` (focus trap, Escape, background scroll lock).
 - Copy and check-in status use `role="status"` or `aria-live="polite"`.
-- `prefers-reduced-motion` stops the marquee, scroll smoothing, reveals, the check-in fade, and video autoplay.
+- `prefers-reduced-motion` stops the marquee, scroll smoothing, reveals, and the check-in fade.
 
 ## Known limitations
 
-- Lore on the reference is five columns of type with no pictures. This site matches that. Chapter artworks are the same files used in the gallery, chart placeholder, check-in, and video posters, not a second image stack inside the lore.
+- Lore on the reference is five columns of type with no pictures. This site matches that. Chapter artworks are used in the gallery and the check-in, not as a second image stack inside the lore.
+- The live chart and “One more night” video section are omitted.
 - The reference soundtrack and its player are absent on purpose.
 - X, Telegram, contract, and Dexscreener stay in a coming-soon state until `lib/site.ts` is filled in.
 - Liquidity burn and ownership renounce are not shown as done.
-- Videos are still-image loops, not character animation.
+- The shipped MP4s are still-image loops and are not shown on the page.
 - Fidelity was checked against the live reference CSS and browser screenshots. It is not a claim that every pixel matches at every width.
 - The closing section carries a faint brand-poster wash. The reference ending is flat color only.
 - Mobile navigation is an explicit menu. The reference instead hides some links as the window narrows.
