@@ -26,12 +26,9 @@ export function ClosingSection() {
           JOIN THE TRASH CLUB
         </a>
       ) : (
-        <>
-          <button className="button orange" type="button" disabled>
-            JOIN THE TRASH CLUB
-          </button>
-          <span className="ending-status">Telegram link not published yet.</span>
-        </>
+        <button className="button orange" type="button" disabled>
+          JOIN THE TRASH CLUB
+        </button>
       )}
     </section>
   );

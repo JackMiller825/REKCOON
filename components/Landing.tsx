@@ -1,5 +1,3 @@
-import { ChartSection } from "./ChartSection";
-import { CinematicVideoSection } from "./CinematicVideoSection";
 import { ClosingSection } from "./ClosingSection";
 import { DailyCheckin } from "./DailyCheckin";
 import { HeroSection } from "./HeroSection";
@@ -20,9 +18,7 @@ export function Landing() {
       <main>
         <HeroSection />
         <MarqueeSection />
-        <ChartSection />
         <LoreSection />
-        <CinematicVideoSection />
         <MemeGallery />
         <DailyCheckin />
         <ClosingSection />

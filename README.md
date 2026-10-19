@@ -55,9 +55,9 @@ Editable token values live in `lib/site.ts`. `token` is the source of identity. 
 | `token.name` | Jimothy the Rekt Raccoon |
 | `token.ticker` / `token.symbol` | REKCOON / $REKCOON |
 | `contractAddress` | Shows `Coming Soon..` until the value is a `0x` + 40 hex address. COPY CA stays visible and copies the text on screen. |
-| `xUrl` | Header shows `X SOON` until this is an `http(s)` URL. |
-| `telegramUrl` | Closing button **Join the Trash Club** opens this URL. Until then the button is disabled and says the Telegram link is not published. |
-| `dexscreenerUrl` | Chart embed and **Open on Dexscreener** activate only for a real `dexscreener.com` pair URL. Otherwise the panel is a still, with no fake price. |
+| `xUrl` | Header and footer show the X icon. It becomes a link when this is an `http(s)` URL. |
+| `telegramUrl` | Footer shows the Telegram icon, and **Join the Trash Club** opens this URL. Until then the closing button stays disabled, with no extra caption. |
+| `dexscreenerUrl` | Stored for a future chart. The chart section is not on the page. |
 | `totalSupply`, `taxPercent` | Stored. Not rendered as a live tokenomics claim. |
 | `liquidityStatus`, `ownershipStatus` | `pending` until verified. The page does not say liquidity is burned or ownership is renounced. |
 
@@ -65,12 +65,10 @@ Story copy, gallery captions, marquee text, and check-in lines live in `lib/cont
 
 ## What the page does
 
-- Header: circular logo, **JIMOTHY**, and a smaller **$REKCOON**. Anchors: Chart, The Lore, Coping Material, and X when a real URL exists.
+- Header: circular logo, **JIMOTHY**, a smaller **$REKCOON**, Lore, Coping Material, and an X icon.
 - Mobile menu below 900px, including Escape to close.
 - Hero headline “Born Jimothy. Rekt by choice.”, contract row, and orange marquee.
-- Chart placeholder until a Dexscreener pair exists.
 - Five Jimothy lore chapters.
-- Two silent video loops under “One more night.”
 - Fourteen-image gallery. Lightbox supports previous, next, arrow keys, Escape, outside click, download of the real file, and focus return.
 - Daily check-in cycles six Jimothy replies.
 - Closing line and Telegram call to action, or a disabled unavailable state.

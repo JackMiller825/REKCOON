@@ -2,9 +2,9 @@
 
 import { useEffect, useState } from "react";
 import { asset, isHttpUrl, site } from "@/lib/site";
+import { XIcon } from "./SocialIcons";
 
 const links = [
-  { href: "#chart", label: "CHART" },
   { href: "#lore", label: "THE LORE" },
   { href: "#memes", label: "COPING MATERIAL" },
 ];
@@ -33,30 +33,34 @@ export function SiteHeader() {
           <small>{site.symbol}</small>
         </span>
       </a>
-      <nav id="site-nav" className={open ? "open" : undefined} aria-label="Main navigation">
-        {links.map((link) => (
-          <a key={link.href} href={link.href} onClick={close}>
-            {link.label}
-          </a>
-        ))}
+      <div className="header-end">
+        <nav id="site-nav" className={open ? "open" : undefined} aria-label="Main navigation">
+          {links.map((link) => (
+            <a key={link.href} href={link.href} onClick={close}>
+              {link.label}
+            </a>
+          ))}
+        </nav>
         {xReady ? (
-          <a className="xlink" href={site.xUrl} target="_blank" rel="noopener noreferrer">
-            X <span>FOLLOW</span>
+          <a className="xlink" href={site.xUrl} target="_blank" rel="noopener noreferrer" aria-label="X">
+            <XIcon />
           </a>
         ) : (
-          <span className="xlink is-soon">X <span>SOON</span></span>
+          <span className="xlink" aria-label="X">
+            <XIcon />
+          </span>
         )}
-      </nav>
-      <button
-        className="menu-btn"
-        type="button"
-        aria-label={open ? "Close menu" : "Open menu"}
-        aria-expanded={open}
-        aria-controls="site-nav"
-        onClick={() => setOpen((value) => !value)}
-      >
-        {open ? "CLOSE" : "MENU"}
-      </button>
+        <button
+          className="menu-btn"
+          type="button"
+          aria-label={open ? "Close menu" : "Open menu"}
+          aria-expanded={open}
+          aria-controls="site-nav"
+          onClick={() => setOpen((value) => !value)}
+        >
+          {open ? "CLOSE" : "MENU"}
+        </button>
+      </div>
     </header>
   );
 }

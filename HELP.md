@@ -48,7 +48,7 @@ All public token fields are in `lib/site.ts`.
 
 ## Token updates
 
-Set `token.contractAddress` to the verified `0x` address (40 hex characters). `site.contractAddress` reads that same value. COPY CA is always shown. It copies the text currently on screen: the real address when one is set, or `Coming Soon..` until then. The status line says “Contract copied.” for a real address and “Copied.” for the placeholder. If the clipboard is blocked, the text is selected so it can be copied manually.
+Set `token.contractAddress` to the verified `0x` address (40 hex characters). `site.contractAddress` reads that same value. COPY CA is always shown. It copies the text currently on screen: the real address when one is set, or `Coming Soon..` until then. The button label changes to COPIED. No status line is shown under the button. If the clipboard is blocked, the address text is selected so it can be copied manually.
 
 The site will not substitute another token’s address.
 
@@ -56,16 +56,13 @@ The site will not substitute another token’s address.
 
 Set `xUrl` and `telegramUrl` to full `http` or `https` URLs.
 
-- Header X link appears only for `xUrl`. Otherwise the header shows `X SOON`, which is not a link.
-- Footer shows X and Telegram only when each URL is valid.
-- **Join the Trash Club** opens `telegramUrl` only.
-- With no Telegram URL, that button stays disabled and the line “Telegram link not published yet.” is shown.
+- The header always shows an X icon. It links only when `xUrl` is valid.
+- The footer always shows X and Telegram icons on the right. Each one links only when its URL is valid.
+- **Join the Trash Club** opens `telegramUrl` only. With no Telegram URL, that button stays disabled and has no extra caption.
 
 ## Chart configuration
 
-Set `dexscreenerUrl` to a `https://dexscreener.com/...` pair URL. The chart section then embeds that pair and **Open on Dexscreener** becomes a real link.
-
-Until then the section shows Jimothy’s chart still, a “No live pair” label, and a disabled **Open on Dexscreener** control. No price is invented. Do not paste another project’s contract or pair.
+`dexscreenerUrl` is stored for a later chart. The chart section is not on the page. Do not paste another project’s contract or pair.
 
 ## Branding asset replacement
 
@@ -82,7 +79,7 @@ Interface type is Barlow Condensed and DM Sans. It sits beside the gold outlaw l
 
 ## Video files
 
-`one-more-night.mp4` and `still-fine.mp4` play in the “One more night” section. They are muted, looping, and start when most of the player is on screen. `preload="none"` keeps them from downloading until needed. Reduced motion leaves them paused on the poster frame, with controls still available. The note under the players says they are silent. Do not describe them as having audio.
+`one-more-night.mp4` and `still-fine.mp4` stay in `public/assets/`. The night section is not on the page, so those files are not played. They are silent still loops. Do not describe them as having audio.
 
 ## Sound system
 
@@ -129,8 +126,7 @@ Sections with `.reveal` fade up once they enter the viewport. The marquee loops.
 - **Images 404 on GitHub Pages:** the base path was not applied. Rebuild with `NEXT_PUBLIC_BASE_PATH=/REKCOON`.
 - **Images 404 locally:** do not set that variable for `npm run dev`.
 - **COPY CA copies “Coming Soon..”:** that is expected until `contractAddress` is a verified `0x` address.
-- **Open on Dexscreener does nothing:** the control is disabled until `dexscreenerUrl` is a real Dexscreener pair.
-- **Join the Trash Club does nothing:** Telegram is not set. The status line under the button says so.
+- **Join the Trash Club does nothing:** Telegram is not set. The button stays disabled.
 - **Horizontal scroll:** check a new wide asset. Hero and ticker are clipped by their own containers.
 - **Build font warning:** Barlow Condensed and DM Sans load from Google Fonts in the browser. The build does not download them.
 
@@ -141,7 +137,7 @@ Sections with `.reveal` fade up once they enter the viewport. The marquee loops.
 - Decorative logo is empty alt because the word JIMOTHY is in the same link. Scene images have descriptions.
 - Dialog is a native `dialog` with `showModal` (focus trap, Escape, background scroll lock).
 - Copy and check-in status use `role="status"` or `aria-live="polite"`.
-- `prefers-reduced-motion` stops the marquee, scroll smoothing, reveals, the hero shift, and video autoplay.
+- `prefers-reduced-motion` stops the marquee, scroll smoothing, reveals, and the hero shift.
 
 ## Known limitations
 
@@ -149,6 +145,6 @@ Sections with `.reveal` fade up once they enter the viewport. The marquee loops.
 - The reference soundtrack and its player are absent on purpose.
 - X, Telegram, contract, and Dexscreener stay unpublished until `lib/site.ts` is filled in.
 - Liquidity burn and ownership renounce are not shown as done.
-- The shipped MP4s are still-image loops. The page says they are silent.
+- The shipped MP4s are silent still-image loops and are not shown on the page.
 - The square poster is a closing wash, not the hero background, because its sign lettering would sit on top of the headline.
 - Fidelity was checked against the live reference CSS and browser screenshots. It is not a claim that every pixel matches at every width.

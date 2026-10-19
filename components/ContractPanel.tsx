@@ -8,15 +8,10 @@ export function ContractPanel() {
   const ready = isAddress(address);
   const shown = ready ? address : site.contractDisplay;
   const [copied, setCopied] = useState(false);
-  const [status, setStatus] = useState("");
 
   const markCopied = () => {
     setCopied(true);
-    setStatus(ready ? "Contract copied." : "Copied.");
-    window.setTimeout(() => {
-      setCopied(false);
-      setStatus("");
-    }, 2500);
+    window.setTimeout(() => setCopied(false), 2500);
   };
 
   const selectAddress = () => {
@@ -57,7 +52,6 @@ export function ContractPanel() {
     }
     const fail = () => {
       setCopied(false);
-      setStatus("Select the address above to copy it.");
       selectAddress();
     };
     if (!navigator.clipboard?.writeText) {
@@ -76,9 +70,6 @@ export function ContractPanel() {
         <button type="button" className="copy-contract" onClick={copy} aria-label="Copy contract address">
           {copied ? "COPIED" : "COPY CA"}
         </button>
-        <span className="copy-status" role="status">
-          {status}
-        </span>
       </div>
       <span className="stamp">
         STILL HERE.

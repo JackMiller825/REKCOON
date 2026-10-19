@@ -6,10 +6,10 @@ Scene filenames match the reference pack so a file can be replaced without renam
 |---|---|---|
 | `texcat.jpg` | Scene still | Hero photograph |
 | `closeup.jpg` | Scene still | In the asset pack. Not placed on the page. |
-| `office-fine.jpg` | Scene still | Daily check-in, gallery card 12, poster for `still-fine.mp4` |
+| `office-fine.jpg` | Scene still | Daily check-in and gallery card 12 |
 | `portfolio-v2.jpg` | Scene still | Chart placeholder and gallery card 11 |
 | `bus-stop.jpg` | Scene still | Gallery card 13 |
-| `diner.jpg` | Scene still | Gallery card 14 and poster for `one-more-night.mp4` |
+| `diner.jpg` | Scene still | Gallery card 14 |
 | `meme-crying.jpg` | Scene still | Gallery card 03 |
 | `meme-party.jpg` | Scene still | Gallery card 01 |
 | `meme-roses.jpg` | Scene still | Gallery card 02 |
@@ -20,8 +20,8 @@ Scene filenames match the reference pack so a file can be replaced without renam
 | `meme-waiting.jpg` | Scene still | Gallery card 08 |
 | `meme-photo.jpg` | Scene still | Gallery card 09 |
 | `meme-sky.jpg` | Scene still | Gallery card 10 |
-| `one-more-night.mp4` | Silent loop | Night section, left player |
-| `still-fine.mp4` | Silent loop | Night section, right player |
+| `one-more-night.mp4` | Silent loop | Kept in the pack. Not played on the page. |
+| `still-fine.mp4` | Silent loop | Kept in the pack. Not played on the page. |
 | `REKCOON-logo-transparent.png` | 1024 × 1024 PNG, transparent outside the circle | Header mark. Source for `app/icon.png` (192) and `app/apple-icon.png` (180) |
 | `REKCOON-brand-poster-square.png` | 1024 × 1024 PNG, opaque | Low-opacity wash on the closing section. Ticker lettering only: `$REKCOON` |
 | `REKCOON-banner-1500x500.png` | 1500 × 500 PNG, opaque | Open Graph and X share image. Lettering: `JIMOTHY THE REKT RACCOON` and `$REKCOON` |

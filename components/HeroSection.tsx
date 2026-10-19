@@ -19,9 +19,6 @@ export function HeroSection() {
           <a className="button orange" href="#lore">
             MEET JIMOTHY
           </a>
-          <a className="text-link" href="#chart">
-            VIEW CHART
-          </a>
         </div>
         <ContractPanel />
       </div>
@@ -40,7 +37,7 @@ export function HeroSection() {
         </div>
         <span className="photo-label">03:00 AM / SOMEWHERE ABOVE THE CITY</span>
       </div>
-      <a href="#chart" className="scroll-note">
+      <a href="#lore" className="scroll-note">
         SCROLL. HE’S NOT GOING ANYWHERE.
       </a>
     </section>
