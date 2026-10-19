@@ -29,7 +29,7 @@ There is no server runtime. Chart embeds, video files, and image downloads are a
 
 Expected URL: `https://jackmiller825.github.io/REKCOON/`.
 
-If assets 404 after a rename, the base path no longer matches the repository name. Change `NEXT_PUBLIC_BASE_PATH` in the workflow and set `NEXT_PUBLIC_SITE_URL` to the origin only (`https://username.github.io`), not the project path. Next prefixes the project path itself.
+If assets 404 after a rename, the base path no longer matches the repository name. Change `NEXT_PUBLIC_BASE_PATH` in the workflow and set `NEXT_PUBLIC_SITE_URL` to the origin only (`https://username.github.io`), not the project path. The Open Graph image is built from both values so the banner URL includes the project path.
 
 Do not invent a production domain in metadata. `metadataBase` uses `NEXT_PUBLIC_SITE_URL`, or `http://localhost:3000` when that variable is absent.
 

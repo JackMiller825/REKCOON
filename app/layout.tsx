@@ -2,6 +2,8 @@ import type { Metadata, Viewport } from "next";
 import "./globals.css";
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000";
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
+const ogImage = new URL(`${basePath}/assets/REKCOON-banner-1500x500.png`, siteUrl).toString();
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -17,7 +19,7 @@ export const metadata: Metadata = {
       "Meet Rekt Raccoon. Bad trades, empty wallet, existential dread, and one very good cowboy hat. A cinematic Ethereum meme token.",
     images: [
       {
-        url: "/assets/REKCOON-banner-1500x500.png",
+        url: ogImage,
         width: 1500,
         height: 500,
         alt: "Rekt Raccoon banner. Still here. Still rekt.",
@@ -29,7 +31,7 @@ export const metadata: Metadata = {
     title: "Rekt Raccoon ($REKCOON) | Still Here. Still Rekt.",
     description:
       "Meet Rekt Raccoon. Bad trades, empty wallet, existential dread, and one very good cowboy hat. A cinematic Ethereum meme token.",
-    images: ["/assets/REKCOON-banner-1500x500.png"],
+    images: [ogImage],
   },
 };
 
